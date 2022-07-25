@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:loc_reminder_app/screens/get_started.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,24 +17,23 @@ class MyApp extends StatelessWidget {
     ));
     return MaterialApp(
       title: 'Loc Reminder',
+      /*
+        Dark Theme Colors
+      */
       darkTheme: ThemeData(
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
               elevation: 0,
-              color: Theme.of(context).scaffoldBackgroundColor,
+              color: Colors.black,
               centerTitle: true,
-              titleTextStyle: const TextStyle(
+              titleTextStyle: TextStyle(
                   color: Color.fromARGB(255, 253, 186, 71),
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
-              iconTheme: const IconThemeData(
-                  color: Color.fromARGB(255, 253, 186, 71))),
+              iconTheme:
+                  IconThemeData(color: Color.fromARGB(255, 253, 186, 71))),
           scaffoldBackgroundColor: Colors.black,
           primaryColor: const Color.fromARGB(255, 253, 186, 71),
-          primaryTextTheme: const TextTheme(
-            headline6: TextStyle(
-              color: Colors.white,
-            ),
-          ),
+          accentColor: const Color(0xFFFFFFFF),
           canvasColor: const Color.fromARGB(255, 29, 29, 32),
           shadowColor: const Color.fromARGB(216, 29, 29, 32),
           errorColor: const Color(0xFFB00020),
@@ -41,6 +41,9 @@ class MyApp extends StatelessWidget {
           buttonTheme: const ButtonThemeData(
               buttonColor: Color.fromARGB(255, 253, 143, 139),
               textTheme: ButtonTextTheme.primary)),
+      /*
+        Light Theme Colors
+      */
       theme: ThemeData(
           appBarTheme: const AppBarTheme(
               elevation: 0,
@@ -54,9 +57,7 @@ class MyApp extends StatelessWidget {
                   IconThemeData(color: Color.fromARGB(255, 113, 74, 142))),
           scaffoldBackgroundColor: Colors.white,
           primaryColor: const Color.fromARGB(255, 113, 74, 142),
-          primaryTextTheme: const TextTheme(
-            headline6: TextStyle(color: Color.fromARGB(255, 39, 39, 39)),
-          ),
+          accentColor: Color.fromARGB(255, 0, 0, 0),
           canvasColor: Colors.white,
           shadowColor: const Color.fromARGB(255, 236, 236, 236),
           errorColor: const Color.fromARGB(255, 212, 0, 39),
@@ -64,22 +65,8 @@ class MyApp extends StatelessWidget {
           buttonTheme: const ButtonThemeData(
               buttonColor: Color.fromARGB(255, 253, 143, 139),
               textTheme: ButtonTextTheme.primary)),
-      home: HomePage(),
+      home: const GetStarted(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Loc Reminder'),
-      ),
-      body: Center(
-        child: const Text('Home Page'),
-      ),
     );
   }
 }
