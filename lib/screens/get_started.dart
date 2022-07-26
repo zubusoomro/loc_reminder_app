@@ -54,16 +54,16 @@ class GetStarted extends GetWidget {
                   child: ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                            Theme.of(context).canvasColor),
+                            Theme.of(context).scaffoldBackgroundColor),
                         foregroundColor: MaterialStateProperty.all(
                             Theme.of(context).primaryColor),
                         minimumSize: MaterialStateProperty.all(Size(
                             MediaQuery.of(context).size.width * 0.5,
                             MediaQuery.of(context).size.height * 0.08)),
-                        elevation: MaterialStateProperty.all(5),
+                        elevation: MaterialStateProperty.all(10),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/login');
+                        Get.toNamed('/login');
                       },
                       child:
                           Text("Get Started", style: TextStyle(fontSize: 15))),

@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:loc_reminder_app/view/signup_view.dart';
-import '../controller/login_controller.dart';
+import 'package:loc_reminder_app/view/login_view.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
 
-class LoginView extends GetWidget<LoginController> {
+class SignupView extends GetWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +16,7 @@ class LoginView extends GetWidget<LoginController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-            Text("Login",
+            Text("Sign Up",
                 style: TextStyle(
                     color: Theme.of(context).accentColor,
                     fontSize: 30,
@@ -43,6 +42,72 @@ class LoginView extends GetWidget<LoginController> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      TextFormField(
+                        style: TextStyle(color: Theme.of(context).accentColor),
+                        decoration: InputDecoration(
+                          labelText: "First Name",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: BorderSide(
+                              color: Theme.of(context).accentColor,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: BorderSide(
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: BorderSide(
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          labelStyle: TextStyle(
+                              color: Theme.of(context).accentColor,
+                              fontSize: 18),
+                          floatingLabelStyle: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                              fontSize: 18),
+                        ),
+                        keyboardType: TextInputType.name,
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.03),
+                      TextFormField(
+                        style: TextStyle(color: Theme.of(context).accentColor),
+                        decoration: InputDecoration(
+                          labelText: "Last Name",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: BorderSide(
+                              color: Theme.of(context).accentColor,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: BorderSide(
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                            borderSide: BorderSide(
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                          labelStyle: TextStyle(
+                              color: Theme.of(context).accentColor,
+                              fontSize: 18),
+                          floatingLabelStyle: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                              fontSize: 18),
+                        ),
+                        keyboardType: TextInputType.name,
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.03),
                       TextFormField(
                         style: TextStyle(color: Theme.of(context).accentColor),
                         decoration: InputDecoration(
@@ -113,7 +178,7 @@ class LoginView extends GetWidget<LoginController> {
                           onPressed: () {},
                           // ignore: sort_child_properties_last
                           child: Text(
-                            "Login",
+                            "Sign Up",
                             style: TextStyle(
                                 fontSize:
                                     MediaQuery.of(context).size.width * 0.045),
@@ -141,12 +206,12 @@ class LoginView extends GetWidget<LoginController> {
                               style:
                                   TextStyle(fontSize: 12, color: Colors.grey)),
                           TextButton(
-                            child: Text("Sign Up",
+                            child: Text("Sign In",
                                 style: TextStyle(
                                     color: Theme.of(context).accentColor,
                                     fontSize: 12)),
                             onPressed: () {
-                              Get.toNamed("/signup");
+                              Get.toNamed("/login");
                             },
                           ),
                         ],
@@ -158,16 +223,19 @@ class LoginView extends GetWidget<LoginController> {
                       SizedBox(
                           height: MediaQuery.of(context).size.height * 0.02),
                       SocialLoginButton(
+                          text: "Continue with Google",
                           buttonType: SocialLoginButtonType.google,
                           onPressed: () {}),
                       SizedBox(
                           height: MediaQuery.of(context).size.height * 0.02),
                       SocialLoginButton(
+                          text: "Continue with Facebook",
                           buttonType: SocialLoginButtonType.facebook,
                           onPressed: () {}),
                       SizedBox(
                           height: MediaQuery.of(context).size.height * 0.02),
                       SocialLoginButton(
+                          text: "Continue with Apple",
                           buttonType: SocialLoginButtonType.apple,
                           onPressed: () {}),
                     ],
