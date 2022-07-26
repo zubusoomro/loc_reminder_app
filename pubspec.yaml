@@ -46,6 +46,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.2.0
   social_login_buttons: ^1.0.6+2
+  easy_splash_screen: ^1.0.3
 
 dev_dependencies:
   flutter_test:
