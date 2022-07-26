@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:loc_reminder_app/screens/get_started.dart';
+import 'package:loc_reminder_app/view/login_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
           buttonTheme: const ButtonThemeData(
               buttonColor: Color.fromARGB(255, 253, 143, 139),
               textTheme: ButtonTextTheme.primary)),
-      home: const GetStarted(),
+      home: LoginView(),
       debugShowCheckedModeBanner: false,
     );
   }
