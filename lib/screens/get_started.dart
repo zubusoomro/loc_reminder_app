@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class GetStarted extends StatelessWidget {
+class GetStarted extends GetWidget {
   const GetStarted({Key? key}) : super(key: key);
 
   @override
