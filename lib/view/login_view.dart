@@ -110,7 +110,9 @@ class LoginView extends GetWidget<LoginController> {
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.toNamed("/main");
+                          },
                           // ignore: sort_child_properties_last
                           child: Text(
                             "Login",
