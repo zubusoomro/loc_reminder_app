@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "102085874846",
+    "project_id": "loc-reminder-be752",
+    "storage_bucket": "loc-reminder-be752.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102085874846:android:8dd7a862c565b8a502d78f",
+        "android_client_info": {
+          "package_name": "com.zubu.loc.reminder.loc_reminder_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102085874846-q4nl30so09easpghp1gaqt382iklimug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-4VcRbQdPek0iu52iKN_gwFoVtKQm4QM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102085874846-q4nl30so09easpghp1gaqt382iklimug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
