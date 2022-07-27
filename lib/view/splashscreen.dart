@@ -1,7 +1,7 @@
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loc_reminder_app/screens/get_started.dart';
+import 'package:loc_reminder_app/view/get_started.dart';
 
 class SplashScreen extends GetWidget {
   @override

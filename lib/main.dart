@@ -21,6 +21,10 @@ void main() async {
         Dark Theme Colors
       */
     darkTheme: ThemeData(
+        drawerTheme: DrawerThemeData(
+          elevation: 20,
+          backgroundColor: Colors.black,
+        ),
         appBarTheme: const AppBarTheme(
             elevation: 0,
             color: Colors.black,
@@ -70,6 +74,10 @@ void main() async {
         Light Theme Colors
       */
     theme: ThemeData(
+        drawerTheme: const DrawerThemeData(
+          elevation: 20,
+          backgroundColor: Color.fromARGB(255, 113, 74, 142),
+        ),
         appBarTheme: const AppBarTheme(
             elevation: 0,
             color: Colors.white,
@@ -86,7 +94,7 @@ void main() async {
         cardColor: Colors.white,
         shadowColor: const Color.fromARGB(255, 236, 236, 236),
         errorColor: const Color.fromARGB(255, 212, 0, 39),
-        secondaryHeaderColor: const Color.fromARGB(255, 103, 46, 146),
+        secondaryHeaderColor: Color.fromARGB(255, 22, 0, 39),
         buttonTheme: const ButtonThemeData(
             buttonColor: Color.fromARGB(255, 253, 143, 139),
             textTheme: ButtonTextTheme.primary)),
