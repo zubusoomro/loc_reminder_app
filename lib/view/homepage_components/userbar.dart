@@ -13,11 +13,11 @@ class UserBar extends GetWidget {
       tasksMsg = "Hurray! no tasks today";
     }
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 10),
       child: Container(
         decoration: BoxDecoration(
             color: Theme.of(context).scaffoldBackgroundColor,
-            borderRadius: BorderRadius.circular(10)),
+            borderRadius: BorderRadius.circular(5)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
