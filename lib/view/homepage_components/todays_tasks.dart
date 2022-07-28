@@ -3,6 +3,8 @@ import "package:get/get.dart";
 import "package:flutter/cupertino.dart";
 
 class TodaysTasks extends GetWidget {
+  const TodaysTasks({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -48,7 +50,7 @@ class TodaysTasks extends GetWidget {
                 alignment: Alignment.centerRight,
                 decoration: BoxDecoration(
                     color: color,
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(50),
                         bottomLeft: Radius.circular(50))),
                 width: Get.size.width * 0.8,
