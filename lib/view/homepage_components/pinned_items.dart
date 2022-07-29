@@ -95,7 +95,6 @@ class PinnedItems extends GetWidget {
                   softWrap: true,
                   style: TextStyle(
                       fontSize: Get.size.width * 0.04,
-                      fontWeight: FontWeight.bold,
                       color: Get.theme.primaryColor)),
             )
           ],
@@ -129,9 +128,7 @@ class PinnedItems extends GetWidget {
                 Text("$date",
                     softWrap: true,
                     style: TextStyle(
-                        fontSize: Get.size.width * 0.03,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey)),
+                        fontSize: Get.size.width * 0.03, color: Colors.grey)),
               ],
             ),
             Container(
@@ -139,9 +136,7 @@ class PinnedItems extends GetWidget {
               child: Text("$location",
                   softWrap: true,
                   style: TextStyle(
-                      fontSize: Get.size.width * 0.03,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey)),
+                      fontSize: Get.size.width * 0.03, color: Colors.grey)),
             )
           ],
         ),

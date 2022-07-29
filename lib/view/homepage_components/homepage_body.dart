@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
 import "package:flutter/cupertino.dart";
+import 'package:loc_reminder_app/view/homepage_components/notes.dart';
 import 'package:loc_reminder_app/view/homepage_components/pinned_items.dart';
 import 'package:loc_reminder_app/view/homepage_components/searchbar.dart';
 import 'package:loc_reminder_app/view/homepage_components/todays_tasks.dart';
@@ -23,7 +24,9 @@ class HomepageBody extends GetWidget {
         SizedBox(height: 10),
         TodaysTasks(),
         SizedBox(height: 40),
-        PinnedItems()
+        PinnedItems(),
+        SizedBox(height: 40),
+        Notes()
       ]),
     );
   }
