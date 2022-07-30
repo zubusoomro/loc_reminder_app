@@ -7,15 +7,14 @@ class SplashScreen extends GetWidget {
   @override
   Widget build(BuildContext context) {
     return EasySplashScreen(
-      logo: const Image(
-          image: AssetImage("assets/images/splashscreen_image.png")),
+      logo: const Image(image: AssetImage("assets/images/splashscreen_image.png")),
       durationInSeconds: 5,
       navigator: const GetStarted(),
-      logoSize: MediaQuery.of(context).size.width * 0.4,
+      logoSize: Get.mediaQuery.size.width * 0.4,
       title: Text(
         "Loc Reminder",
         style: TextStyle(
-          fontSize: MediaQuery.of(context).size.width * 0.05,
+          fontSize: Get.mediaQuery.size.width * 0.05,
           color: Colors.white,
           fontWeight: FontWeight.bold,
         ),
