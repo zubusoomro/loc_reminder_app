@@ -9,7 +9,7 @@ class SearchBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 40, right: 40, top: 5, bottom: 20),
       child: TextField(
-        style: TextStyle(color: Get.theme.accentColor),
+        style: TextStyle(color: Get.theme.colorScheme.secondary),
         onSubmitted: (value) {},
         keyboardType: TextInputType.text,
         decoration: InputDecoration(

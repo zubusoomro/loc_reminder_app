@@ -1,6 +1,6 @@
+import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:get/get.dart";
-import "package:flutter/cupertino.dart";
 
 class PinnedItems extends GetWidget {
   const PinnedItems({Key? key}) : super(key: key);
@@ -14,14 +14,8 @@ class PinnedItems extends GetWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Pinned Items",
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Get.theme.accentColor)),
-              IconButton(
-                  icon: Icon(Icons.edit, color: Get.theme.primaryColor),
-                  onPressed: () {})
+              Text("Pinned Items", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Get.theme.colorScheme.secondary)),
+              IconButton(icon: Icon(Icons.edit, color: Get.theme.primaryColor), onPressed: () {})
             ],
           ),
         ),
@@ -37,17 +31,10 @@ class PinnedItems extends GetWidget {
             ),
             shrinkWrap: true,
             children: [
-              item("Google I/O Extended", "Monday, 30th July",
-                  "Iqra University Main Campus", "event"),
-              item(
-                  "Networking Assignment",
-                  "Monday, 29th July",
-                  "lorem ipsum dolor sit amet, consectetur adipiscing elit e ",
-                  "note"),
-              item("Friend's Marriage", "Monday, 29th July", "Ramada Plaza",
-                  "event"),
-              item("Doctor's appointment", "Monday, 29th July",
-                  "Agha Khan Hospital", "task")
+              item("Google I/O Extended", "Monday, 30th July", "Iqra University Main Campus", "event"),
+              item("Networking Assignment", "Monday, 29th July", "lorem ipsum dolor sit amet, consectetur adipiscing elit e ", "note"),
+              item("Friend's Marriage", "Monday, 29th July", "Ramada Plaza", "event"),
+              item("Doctor's appointment", "Monday, 29th July", "Agha Khan Hospital", "task")
             ],
           ),
         ),
@@ -62,10 +49,7 @@ class PinnedItems extends GetWidget {
         decoration: BoxDecoration(
           color: Get.theme.scaffoldBackgroundColor,
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(
-              color: Get.theme.primaryColor,
-              width: 1,
-              style: BorderStyle.solid),
+          border: Border.all(color: Get.theme.primaryColor, width: 1, style: BorderStyle.solid),
         ),
         width: Get.size.width * 0.8,
         height: Get.size.width * 0.1,
@@ -76,27 +60,13 @@ class PinnedItems extends GetWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("$name",
-                    softWrap: true,
-                    style: TextStyle(
-                        fontSize: Get.size.width * 0.04,
-                        fontWeight: FontWeight.bold,
-                        color: Get.theme.accentColor)),
-                Text("$date",
-                    softWrap: true,
-                    style: TextStyle(
-                        fontSize: Get.size.width * 0.03,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey)),
+                Text("$name", softWrap: true, style: TextStyle(fontSize: Get.size.width * 0.04, fontWeight: FontWeight.bold, color: Get.theme.colorScheme.secondary)),
+                Text("$date", softWrap: true, style: TextStyle(fontSize: Get.size.width * 0.03, fontWeight: FontWeight.bold, color: Colors.grey)),
               ],
             ),
             Container(
               alignment: Alignment.bottomLeft,
-              child: Text("$location",
-                  softWrap: true,
-                  style: TextStyle(
-                      fontSize: Get.size.width * 0.04,
-                      color: Get.theme.primaryColor)),
+              child: Text("$location", softWrap: true, style: TextStyle(fontSize: Get.size.width * 0.04, color: Get.theme.primaryColor)),
             )
           ],
         ),
@@ -107,10 +77,7 @@ class PinnedItems extends GetWidget {
         decoration: BoxDecoration(
           color: Get.theme.scaffoldBackgroundColor,
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(
-              color: Get.theme.primaryColor,
-              width: 1,
-              style: BorderStyle.solid),
+          border: Border.all(color: Get.theme.primaryColor, width: 1, style: BorderStyle.solid),
         ),
         width: Get.size.width * 0.8,
         height: Get.size.width * 0.1,
@@ -120,24 +87,13 @@ class PinnedItems extends GetWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("$name",
-                    softWrap: true,
-                    style: TextStyle(
-                        fontSize: Get.size.width * 0.04,
-                        fontWeight: FontWeight.bold,
-                        color: Get.theme.accentColor)),
-                Text("$date",
-                    softWrap: true,
-                    style: TextStyle(
-                        fontSize: Get.size.width * 0.03, color: Colors.grey)),
+                Text("$name", softWrap: true, style: TextStyle(fontSize: Get.size.width * 0.04, fontWeight: FontWeight.bold, color: Get.theme.colorScheme.secondary)),
+                Text("$date", softWrap: true, style: TextStyle(fontSize: Get.size.width * 0.03, color: Colors.grey)),
               ],
             ),
             Container(
               padding: EdgeInsets.only(top: 10),
-              child: Text("$location",
-                  softWrap: true,
-                  style: TextStyle(
-                      fontSize: Get.size.width * 0.03, color: Colors.grey)),
+              child: Text("$location", softWrap: true, style: TextStyle(fontSize: Get.size.width * 0.03, color: Colors.grey)),
             )
           ],
         ),

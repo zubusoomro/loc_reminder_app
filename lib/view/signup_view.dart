@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:loc_reminder_app/view/login_view.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
 
 class SignupView extends GetWidget {
@@ -15,160 +14,130 @@ class SignupView extends GetWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-            Text("Sign Up",
-                style: TextStyle(
-                    color: Theme.of(context).accentColor,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold)),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+            SizedBox(height: Get.mediaQuery.size.height * 0.05),
+            Text("Sign Up", style: TextStyle(color: Get.theme.colorScheme.secondary, fontSize: 30, fontWeight: FontWeight.bold)),
+            SizedBox(height: Get.mediaQuery.size.height * 0.05),
             Container(
-                padding:
-                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.1),
-                width: MediaQuery.of(context).size.width * 0.9,
+                padding: EdgeInsets.all(Get.mediaQuery.size.width * 0.1),
+                width: Get.mediaQuery.size.width * 0.9,
                 decoration: BoxDecoration(
-                    color: Theme.of(context).scaffoldBackgroundColor,
+                    color: Get.theme.scaffoldBackgroundColor,
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                        color: Theme.of(context).shadowColor, width: 1),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Theme.of(context).shadowColor,
-                          blurRadius: 100,
-                          offset: const Offset(0, 0))
-                    ]),
+                    border: Border.all(color: Get.theme.shadowColor, width: 1),
+                    boxShadow: [BoxShadow(color: Get.theme.shadowColor, blurRadius: 100, offset: const Offset(0, 0))]),
                 child: Form(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       TextFormField(
-                        style: TextStyle(color: Theme.of(context).accentColor),
+                        style: TextStyle(color: Get.theme.colorScheme.secondary),
                         decoration: InputDecoration(
                           labelText: "First Name",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).accentColor,
+                              color: Get.theme.colorScheme.secondary,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
-                          labelStyle: TextStyle(
-                              color: Theme.of(context).accentColor,
-                              fontSize: 18),
-                          floatingLabelStyle: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontSize: 18),
+                          labelStyle: TextStyle(color: Get.theme.colorScheme.secondary, fontSize: 18),
+                          floatingLabelStyle: TextStyle(color: Get.theme.primaryColor, fontSize: 18),
                         ),
                         keyboardType: TextInputType.name,
                       ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.03),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.03),
                       TextFormField(
-                        style: TextStyle(color: Theme.of(context).accentColor),
+                        style: TextStyle(color: Get.theme.colorScheme.secondary),
                         decoration: InputDecoration(
                           labelText: "Last Name",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).accentColor,
+                              color: Get.theme.colorScheme.secondary,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
-                          labelStyle: TextStyle(
-                              color: Theme.of(context).accentColor,
-                              fontSize: 18),
-                          floatingLabelStyle: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontSize: 18),
+                          labelStyle: TextStyle(color: Get.theme.colorScheme.secondary, fontSize: 18),
+                          floatingLabelStyle: TextStyle(color: Get.theme.primaryColor, fontSize: 18),
                         ),
                         keyboardType: TextInputType.name,
                       ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.03),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.03),
                       TextFormField(
-                        style: TextStyle(color: Theme.of(context).accentColor),
+                        style: TextStyle(color: Get.theme.colorScheme.secondary),
                         decoration: InputDecoration(
                           labelText: "Email",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).accentColor,
+                              color: Get.theme.colorScheme.secondary,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
-                          labelStyle: TextStyle(
-                              color: Theme.of(context).accentColor,
-                              fontSize: 18),
-                          floatingLabelStyle: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontSize: 18),
+                          labelStyle: TextStyle(color: Get.theme.colorScheme.secondary, fontSize: 18),
+                          floatingLabelStyle: TextStyle(color: Get.theme.primaryColor, fontSize: 18),
                         ),
                         keyboardType: TextInputType.emailAddress,
                       ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.03),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.03),
                       TextFormField(
-                        style: TextStyle(color: Theme.of(context).accentColor),
+                        style: TextStyle(color: Get.theme.colorScheme.secondary),
                         decoration: InputDecoration(
                           labelText: "Password",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).accentColor,
+                              color: Get.theme.colorScheme.secondary,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
+                              color: Get.theme.primaryColor,
                             ),
                           ),
-                          labelStyle: TextStyle(
-                              color: Theme.of(context).accentColor,
-                              fontSize: 18),
-                          floatingLabelStyle: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontSize: 18),
+                          labelStyle: TextStyle(color: Get.theme.colorScheme.secondary, fontSize: 18),
+                          floatingLabelStyle: TextStyle(color: Get.theme.primaryColor, fontSize: 18),
                         ),
                         obscureText: true,
                         keyboardType: TextInputType.visiblePassword,
@@ -179,69 +148,41 @@ class SignupView extends GetWidget {
                           // ignore: sort_child_properties_last
                           child: Text(
                             "Sign Up",
-                            style: TextStyle(
-                                fontSize:
-                                    MediaQuery.of(context).size.width * 0.045),
+                            style: TextStyle(fontSize: Get.mediaQuery.size.width * 0.045),
                           ),
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                Theme.of(context).primaryColor),
-                            minimumSize: MaterialStateProperty.all(Size(
-                                MediaQuery.of(context).size.width,
-                                MediaQuery.of(context).size.height * 0.08)),
+                            backgroundColor: MaterialStateProperty.all(Get.theme.primaryColor),
+                            minimumSize: MaterialStateProperty.all(Size(Get.mediaQuery.size.width, Get.mediaQuery.size.height * 0.08)),
                           )),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.01),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextButton(
-                            child: Text("Forgot Password",
-                                style: TextStyle(
-                                    color: Theme.of(context).accentColor,
-                                    fontSize: 12)),
+                            child: Text("Forgot Password", style: TextStyle(color: Get.theme.colorScheme.secondary, fontSize: 12)),
                             onPressed: () {},
                           ),
-                          const Text("|",
-                              style:
-                                  TextStyle(fontSize: 12, color: Colors.grey)),
+                          const Text("|", style: TextStyle(fontSize: 12, color: Colors.grey)),
                           TextButton(
-                            child: Text("Sign In",
-                                style: TextStyle(
-                                    color: Theme.of(context).accentColor,
-                                    fontSize: 12)),
+                            child: Text("Sign In", style: TextStyle(color: Get.theme.colorScheme.secondary, fontSize: 12)),
                             onPressed: () {
                               Get.toNamed("/login");
                             },
                           ),
                         ],
                       ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.003),
-                      const Text("OR",
-                          style: TextStyle(fontSize: 12, color: Colors.grey)),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02),
-                      SocialLoginButton(
-                          text: "Continue with Google",
-                          buttonType: SocialLoginButtonType.google,
-                          onPressed: () {}),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02),
-                      SocialLoginButton(
-                          text: "Continue with Facebook",
-                          buttonType: SocialLoginButtonType.facebook,
-                          onPressed: () {}),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02),
-                      SocialLoginButton(
-                          text: "Continue with Apple",
-                          buttonType: SocialLoginButtonType.apple,
-                          onPressed: () {}),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.003),
+                      const Text("OR", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.02),
+                      SocialLoginButton(text: "Continue with Google", buttonType: SocialLoginButtonType.google, onPressed: () {}),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.02),
+                      SocialLoginButton(text: "Continue with Facebook", buttonType: SocialLoginButtonType.facebook, onPressed: () {}),
+                      SizedBox(height: Get.mediaQuery.size.height * 0.02),
+                      SocialLoginButton(text: "Continue with Apple", buttonType: SocialLoginButtonType.apple, onPressed: () {}),
                     ],
                   ),
                 )),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+            SizedBox(height: Get.mediaQuery.size.height * 0.03),
           ],
         ),
       ),

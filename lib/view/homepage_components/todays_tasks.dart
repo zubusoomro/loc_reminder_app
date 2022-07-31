@@ -1,6 +1,6 @@
+import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:get/get.dart";
-import "package:flutter/cupertino.dart";
 
 class TodaysTasks extends GetWidget {
   const TodaysTasks({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class TodaysTasks extends GetWidget {
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: Get.theme.accentColor)),
+                      color: Get.theme.colorScheme.secondary)),
               IconButton(
                   icon: Icon(CupertinoIcons.add_circled_solid,
                       color: Get.theme.primaryColor),
