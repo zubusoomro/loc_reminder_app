@@ -50,7 +50,7 @@ class GetStarted extends GetWidget {
                       BoxDecoration(color: Theme.of(context).primaryColor),
                 ),
                 Positioned(
-                  top: MediaQuery.of(context).size.height * 0.06,
+                  top: 40,
                   child: ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(

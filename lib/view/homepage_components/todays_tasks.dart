@@ -53,8 +53,8 @@ class TodaysTasks extends GetWidget {
                     borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(50),
                         bottomLeft: Radius.circular(50))),
-                width: Get.size.width * 0.8,
-                height: Get.size.width * 0.1,
+                width: Get.mediaQuery.size.width * 0.8,
+                height: Get.mediaQuery.size.width * 0.1,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Center(

@@ -28,6 +28,7 @@ class PinnedItems extends GetWidget {
         Padding(
           padding: const EdgeInsets.only(left: 10.0, right: 10.0),
           child: GridView(
+            physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 1.5,
