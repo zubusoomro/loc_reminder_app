@@ -198,3 +198,5 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 
+android/.idea/compiler.xml
+android/.idea/
