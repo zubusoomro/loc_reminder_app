@@ -40,36 +40,32 @@ class GetStarted extends GetWidget {
           ),
           SizedBox(height: Get.mediaQuery.size.height * 0.005),
           Expanded(
-            child: Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                Container(
+            child: Stack(alignment: Alignment.bottomCenter, children: [
+              Container(
                   width: Get.mediaQuery.size.width,
                   height: 80,
-                  decoration: BoxDecoration(color: Get.theme.primaryColor),
-                ),
-                Positioned(
-                  top: Get.mediaQuery.size.height * 0.06,
-                  child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                            Get.theme.scaffoldBackgroundColor),
-                        foregroundColor:
-                            MaterialStateProperty.all(Get.theme.primaryColor),
-                        minimumSize: MaterialStateProperty.all(Size(
-                            Get.mediaQuery.size.width * 0.5,
-                            Get.mediaQuery.size.height * 0.08)),
-                        elevation: MaterialStateProperty.all(10),
-                      ),
-                      onPressed: () {
-                        Get.toNamed('/login');
-                      },
-                      child:
-                          Text("Get Started", style: TextStyle(fontSize: 15))),
-                ),
-              ],
-            ),
-          )
+                  decoration: BoxDecoration(
+                    color: Get.theme.primaryColor,
+                  ),
+                  child: TextButton(
+                    onPressed: () {
+                      Get.toNamed('/login');
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text("Get Started",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        SizedBox(width: 10),
+                        Icon(Icons.arrow_forward, color: Colors.white),
+                      ],
+                    ),
+                  )),
+            ]),
+          ),
         ],
       ),
     );
