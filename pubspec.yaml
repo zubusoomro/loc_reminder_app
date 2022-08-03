@@ -48,6 +48,7 @@ dependencies:
   social_login_buttons: ^1.0.6+2
   easy_splash_screen: ^1.0.3
   flutter_advanced_drawer: ^1.3.2
+  table_calendar: ^3.0.6
 
 dev_dependencies:
   flutter_test:
