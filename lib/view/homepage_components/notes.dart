@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import "package:get/get.dart";
 
@@ -11,11 +12,23 @@ class Notes extends GetWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(right: 20.0, left: 20.0, bottom: 10.0),
-          child: Text("Notes",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Get.theme.colorScheme.secondary)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Notes",
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Get.theme.colorScheme.secondary)),
+              IconButton(
+                icon: Icon(CupertinoIcons.add_circled_solid,
+                    color: Get.theme.primaryColor),
+                onPressed: () {
+                  Get.toNamed("/notes");
+                },
+              )
+            ],
+          ),
         ),
         Container(
             height: 200,

@@ -41,7 +41,7 @@ void main() async {
         canvasColor: Color.fromARGB(255, 26, 26, 26),
         shadowColor: const Color.fromARGB(216, 29, 29, 32),
         errorColor: const Color(0xFFB00020),
-        secondaryHeaderColor: const Color.fromARGB(255, 133, 86, 4),
+        secondaryHeaderColor: Colors.black,
         buttonTheme: const ButtonThemeData(
             buttonColor: Color.fromARGB(255, 253, 143, 139),
             textTheme: ButtonTextTheme.primary),
@@ -94,7 +94,7 @@ void main() async {
         cardColor: Colors.white,
         shadowColor: const Color.fromARGB(255, 236, 236, 236),
         errorColor: const Color.fromARGB(255, 212, 0, 39),
-        secondaryHeaderColor: Color.fromARGB(255, 22, 0, 39),
+        secondaryHeaderColor: const Color.fromARGB(255, 113, 74, 142),
         buttonTheme: const ButtonThemeData(
             buttonColor: Color.fromARGB(255, 253, 143, 139),
             textTheme: ButtonTextTheme.primary)),

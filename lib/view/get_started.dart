@@ -53,7 +53,7 @@ class GetStarted extends GetWidget {
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
+                      children: const [
                         Text("Get Started",
                             style: TextStyle(
                                 fontSize: 20,
