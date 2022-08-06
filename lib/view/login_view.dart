@@ -7,6 +7,8 @@ import 'package:social_login_buttons/social_login_buttons.dart';
 import '../controller/login_controller.dart';
 
 class LoginView extends GetWidget<LoginController> {
+  const LoginView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loc_reminder_app/controller/initial_controller.dart';
+import 'package:loc_reminder_app/routes/routes.dart';
+import 'package:loc_reminder_app/utils/appconstants.dart';
 
 class GetStarted extends GetWidget {
   const GetStarted({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var title = Text("Loc Reminder",
-        style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Get.theme.primaryColor));
-    var welcomeNote = Text("Manage Your Tasks With",
-        style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-            color: Get.theme.colorScheme.secondary));
+    var title = Text("Loc Reminder", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Get.theme.primaryColor));
+    var welcomeNote = Text("Manage Your Tasks With", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Get.theme.colorScheme.secondary));
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -28,15 +23,11 @@ class GetStarted extends GetWidget {
               children: [welcomeNote, title],
             ),
           ),
-          Image(
-              image: const AssetImage('assets/images/get_started_image.png'),
-              width: Get.mediaQuery.size.width * 0.8),
+          Image(image: const AssetImage('assets/images/get_started_image.png'), width: Get.mediaQuery.size.width * 0.8),
           const Padding(
             padding: EdgeInsets.only(right: 15.0, left: 15.0),
-            child: Text(
-                "You need our app when you are overwhelmed with the number of tasks you have on your mind and you can't remember them",
-                style: TextStyle(fontSize: 18, color: Colors.grey),
-                textAlign: TextAlign.center),
+            child: Text("You need our app when you are overwhelmed with the number of tasks you have on your mind and you can't remember them",
+                style: TextStyle(fontSize: 18, color: Colors.grey), textAlign: TextAlign.center),
           ),
           SizedBox(height: Get.mediaQuery.size.height * 0.005),
           Expanded(
@@ -52,20 +43,17 @@ class GetStarted extends GetWidget {
                   top: Get.mediaQuery.size.height * 0.06,
                   child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                            Get.theme.scaffoldBackgroundColor),
-                        foregroundColor:
-                            MaterialStateProperty.all(Get.theme.primaryColor),
-                        minimumSize: MaterialStateProperty.all(Size(
-                            Get.mediaQuery.size.width * 0.5,
-                            Get.mediaQuery.size.height * 0.08)),
+                        backgroundColor: MaterialStateProperty.all(Get.theme.scaffoldBackgroundColor),
+                        foregroundColor: MaterialStateProperty.all(Get.theme.primaryColor),
+                        minimumSize: MaterialStateProperty.all(Size(Get.mediaQuery.size.width * 0.5, Get.mediaQuery.size.height * 0.08)),
                         elevation: MaterialStateProperty.all(10),
                       ),
-                      onPressed: () {
-                        Get.toNamed('/login');
+                      onPressed: () async {
+                        InitialController initController = Get.find();
+                        await initController.getPreferences().setBool(AppConstants.isFirstTime, false);
+                        Get.offNamed(Routes.login);
                       },
-                      child:
-                          Text("Get Started", style: TextStyle(fontSize: 15))),
+                      child: const Text("Get Started", style: TextStyle(fontSize: 15))),
                 ),
               ],
             ),

@@ -3,6 +3,8 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../routes/routes.dart';
+
 class LoginController extends GetxController {
   RxBool showProgress = RxBool(false);
   String _verificationId = '';
@@ -16,10 +18,8 @@ class LoginController extends GetxController {
     super.onInit();
     firebaseUser.bindStream(_auth.authStateChanges());
     firebaseUser.listen((user) {
-      if (user != null &&
-          user.displayName != null &&
-          user.displayName!.isNotEmpty) {
-        Get.offNamed("/main");
+      if (user != null) {
+        Get.offNamed(Routes.main);
       }
     });
   }
@@ -31,11 +31,9 @@ class LoginController extends GetxController {
 
   void signInWithGmail() async {
     googleSignIn = GoogleSignIn();
-    final GoogleSignInAccount? googleSignInAccount =
-        await googleSignIn.signIn();
+    final GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
     if (googleSignInAccount != null) {
-      final GoogleSignInAuthentication googleSignInAuthentication =
-          await googleSignInAccount.authentication;
+      final GoogleSignInAuthentication googleSignInAuthentication = await googleSignInAccount.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleSignInAuthentication.accessToken,
         idToken: googleSignInAuthentication.idToken,
@@ -50,8 +48,7 @@ class LoginController extends GetxController {
 
   void signInFacebook() async {
     final LoginResult loginResult = await FacebookAuth.instance.login();
-    final OAuthCredential facebookAuthCredential =
-        FacebookAuthProvider.credential(loginResult.accessToken!.token);
+    final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.token);
     _auth.signInWithCredential(facebookAuthCredential);
   }
 
@@ -59,11 +56,10 @@ class LoginController extends GetxController {
   void signInWithCredentials(String smsCode) async {
     print(_verificationId);
     print(smsCode);
-    PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: _verificationId, smsCode: smsCode);
+    PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: _verificationId, smsCode: smsCode);
     try {
       await _auth.signInWithCredential(credential);
-    } on Exception catch (e) {
+    } on Exception catch (ignore) {
       Get.showSnackbar(GetBar(
         title: "Error!",
         duration: const Duration(seconds: 5),

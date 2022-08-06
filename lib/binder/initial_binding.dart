@@ -1,0 +1,1 @@
+import 'package:get/instance_manager.dart';import 'package:loc_reminder_app/controller/initial_controller.dart';class InitialBinding extends Bindings {  @override  void dependencies() {    Get.put<InitialController>(InitialController(), permanent: true);    // Get.put(InitialController(), permanent: true);  }}

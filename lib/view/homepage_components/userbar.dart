@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class UserBar extends GetWidget {
-  final userName, noOfTasks;
+  final String? userName;
+  final int noOfTasks;
 
-  const UserBar({Key? key, required this.userName, this.noOfTasks}) : super(key: key);
+  const UserBar({Key? key, required this.userName, required this.noOfTasks}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     String tasksMsg = "You have $noOfTasks tasks today";
-    if (noOfTasks == null) {
+    if (noOfTasks == 0) {
       tasksMsg = "Hurray! no tasks today";
     }
     return Padding(

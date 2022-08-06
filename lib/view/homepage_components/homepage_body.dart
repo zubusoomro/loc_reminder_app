@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
-import 'package:get/get.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/cupertino.dart";
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:loc_reminder_app/view/homepage_components/notes.dart';
 import 'package:loc_reminder_app/view/homepage_components/pinned_items.dart';
 import 'package:loc_reminder_app/view/homepage_components/searchbar.dart';
@@ -15,18 +15,18 @@ class HomepageBody extends GetWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(children: const [
+      child: Column(children: [
         UserBar(
-          userName: "Zaid Ahmed",
+          userName: FirebaseAuth.instance.currentUser?.displayName,
           noOfTasks: 3,
         ),
-        SearchBar(),
-        SizedBox(height: 10),
-        TodaysTasks(),
-        SizedBox(height: 40),
-        PinnedItems(),
-        SizedBox(height: 40),
-        Notes()
+        const SearchBar(),
+        const SizedBox(height: 10),
+        const TodaysTasks(),
+        const SizedBox(height: 40),
+        const PinnedItems(),
+        const SizedBox(height: 40),
+        const Notes()
       ]),
     );
   }
