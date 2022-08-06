@@ -27,14 +27,30 @@ class CustomAdvancedDrawer extends GetWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 20, top: 20),
-                child: Column(mainAxisAlignment: MainAxisAlignment.end, children: const <Widget>[
-                  ListTile(leading: Icon(CupertinoIcons.map_pin_ellipse), title: Text("Map")),
-                  ListTile(leading: Icon(CupertinoIcons.calendar), title: Text("Calendar")),
-                  ListTile(leading: Icon(CupertinoIcons.create), title: Text("Notes")),
-                  ListTile(leading: Icon(CupertinoIcons.settings), title: Text("Settings")),
-                  ListTile(leading: Icon(CupertinoIcons.info), title: Text("About")),
-                  ListTile(leading: Icon(Icons.logout), title: Text("Logout")),
-                ]),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      ListTile(
+                          leading: Icon(CupertinoIcons.map_pin_ellipse),
+                          title: Text("Map")),
+                      ListTile(
+                          leading: Icon(CupertinoIcons.calendar),
+                          title: Text("Calendar")),
+                      ListTile(
+                          onTap: () {
+                            Get.toNamed('/notes');
+                          },
+                          leading: Icon(CupertinoIcons.create),
+                          title: Text("Notes")),
+                      ListTile(
+                          leading: Icon(CupertinoIcons.settings),
+                          title: Text("Settings")),
+                      ListTile(
+                          leading: Icon(CupertinoIcons.info),
+                          title: Text("About")),
+                      ListTile(
+                          leading: Icon(Icons.logout), title: Text("Logout")),
+                    ]),
               )
             ],
           ),

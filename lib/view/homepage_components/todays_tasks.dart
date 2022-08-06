@@ -27,11 +27,11 @@ class TodaysTasks extends GetWidget {
           ),
         ),
         task("Doctor's appointment", "1:00 PM", "Agha Khan Hospital",
-            Color.fromARGB(255, 114, 208, 252)),
+            Colors.blueAccent),
         task("Meeting with Boss", "3:30 PM", "X Software Solutions",
-            Color.fromARGB(255, 255, 162, 213)),
+            Colors.teal),
         task("Pick up glasses", "6:00 PM", "Look Optics, Gulistan-e-Johar",
-            Color.fromRGBO(55, 255, 98, 1)),
+            Colors.deepOrangeAccent),
       ],
     );
   }

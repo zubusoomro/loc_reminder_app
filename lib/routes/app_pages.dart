@@ -4,6 +4,7 @@ import 'package:loc_reminder_app/routes/routes.dart';
 import 'package:loc_reminder_app/view/get_started.dart';
 import 'package:loc_reminder_app/view/homepage.dart';
 import 'package:loc_reminder_app/view/login_view.dart';
+import 'package:loc_reminder_app/view/notes_view.dart';
 import 'package:loc_reminder_app/view/signup_view.dart';
 import 'package:loc_reminder_app/view/splashscreen.dart';
 
@@ -15,6 +16,7 @@ class AppPages {
     GetPage(name: Routes.getStarted, page: () => const GetStarted()),
     GetPage(name: Routes.login, page: () => const LoginView(), binding: LoginControllerBinding()),
     GetPage(name: Routes.signup, page: () => SignupView()),
-    GetPage(name: Routes.main, page: () => const Homepage()),
+    GetPage(name: Routes.main, page: () => Homepage()),
+    GetPage(name: Routes.notes, page: () => NotesView()),
   ];
 }

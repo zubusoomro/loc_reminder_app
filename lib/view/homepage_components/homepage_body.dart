@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import "package:flutter/cupertino.dart";
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:loc_reminder_app/view/homepage_components/events.dart';
 import 'package:loc_reminder_app/view/homepage_components/notes.dart';
 import 'package:loc_reminder_app/view/homepage_components/pinned_items.dart';
 import 'package:loc_reminder_app/view/homepage_components/searchbar.dart';
@@ -26,7 +26,9 @@ class HomepageBody extends GetWidget {
         const SizedBox(height: 40),
         const PinnedItems(),
         const SizedBox(height: 40),
-        const Notes()
+        const Notes(),
+        const SizedBox(height: 40),
+        const HomePageEventsSection()
       ]),
     );
   }
