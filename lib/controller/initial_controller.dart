@@ -1,0 +1,1 @@
+import 'package:get/get.dart';import 'package:shared_preferences/shared_preferences.dart';class InitialController extends GetxController {  late SharedPreferences _preferences;  @override  void onInit() async {    super.onInit();    _preferences = await SharedPreferences.getInstance();  }  SharedPreferences getPreferences() {    return _preferences;  }}

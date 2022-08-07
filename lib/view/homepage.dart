@@ -1,12 +1,14 @@
+import "package:flutter/cupertino.dart";
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
-import "package:flutter/cupertino.dart";
+
 import 'homepage_components/drawer.dart';
 import 'homepage_components/homepage_body.dart';
-import 'homepage_components/userbar.dart';
 
 class Homepage extends StatefulWidget {
+  const Homepage({Key? key}) : super(key: key);
+
   @override
   State<Homepage> createState() => _HomepageState();
 }
@@ -39,7 +41,7 @@ class _HomepageState extends State<Homepage> {
               valueListenable: _advancedDrawerController,
               builder: (_, value, __) {
                 return AnimatedSwitcher(
-                  duration: Duration(milliseconds: 250),
+                  duration: const Duration(milliseconds: 250),
                   child: Icon(
                     value.visible ? Icons.clear : CupertinoIcons.bars,
                     key: ValueKey<bool>(value.visible),
@@ -49,7 +51,7 @@ class _HomepageState extends State<Homepage> {
             ),
           ),
         ),
-        body: HomepageBody(),
+        body: const HomepageBody(),
       ),
     );
   }

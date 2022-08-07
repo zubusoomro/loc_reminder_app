@@ -20,6 +20,7 @@ lib/generated_plugin_registrant.dart
 #pubspec.lock
 
 # Android related
+android/.idea/gradle.xml
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
 **/android/captures/
@@ -134,6 +135,7 @@ obj/
 /out/
 
 # User-specific configurations
+ android/.idea/
 .idea/caches/
 .idea/libraries/
 .idea/shelf/
@@ -155,7 +157,6 @@ obj/
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 .idea/assetWizardSettings.xml
-.idea/gradle.xml
 .idea/jarRepositories.xml
 .idea/navEditor.xml
 
@@ -196,4 +197,6 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/flutter,androidstudio
+
+android/.idea/compiler.xml
+android/.idea/

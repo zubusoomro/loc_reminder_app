@@ -38,7 +38,7 @@ dependencies:
   flutter_signin_button: ^2.0.0
   flutter_facebook_auth: ^4.4.0+1
   #  intl_phone_number_input: ^0.7.0+2
-  libphonenumber: ^2.0.1
+#  libphonenumber: ^2.0.1
   equatable: ^2.0.3
 
   # The following adds the Cupertino Icons font to your application.
@@ -47,6 +47,7 @@ dependencies:
   font_awesome_flutter: ^9.2.0
   social_login_buttons: ^1.0.6+2
   flutter_advanced_drawer: ^1.3.2
+  shared_preferences: ^2.0.15
   table_calendar: ^3.0.6
 
 dev_dependencies:

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loc_reminder_app/controller/initial_controller.dart';
+import 'package:loc_reminder_app/routes/routes.dart';
+import 'package:loc_reminder_app/utils/appconstants.dart';
 
 class GetStarted extends GetWidget {
   const GetStarted({Key? key}) : super(key: key);
@@ -48,8 +51,12 @@ class GetStarted extends GetWidget {
                     color: Get.theme.primaryColor,
                   ),
                   child: TextButton(
-                    onPressed: () {
-                      Get.toNamed('/login');
+                    onPressed: () async {
+                      InitialController initController = Get.find();
+                      await initController
+                          .getPreferences()
+                          .setBool(AppConstants.isFirstTime, false);
+                      Get.offNamed(Routes.login);
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,

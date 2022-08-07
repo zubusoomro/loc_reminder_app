@@ -1,0 +1,1 @@
+class AppConstants {  AppConstants._();  static const String getStorageName = 'loc_reminder_storage';  static const String isFirstTime = 'app_run_first_time';}

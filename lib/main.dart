@@ -1,7 +1,9 @@
+import "package:firebase_core/firebase_core.dart";
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import "package:firebase_core/firebase_core.dart";
+
+import 'binder/initial_binding.dart';
 import 'routes/app_pages.dart';
 
 void main() async {
@@ -15,13 +17,14 @@ void main() async {
 
   runApp(GetMaterialApp(
     getPages: AppPages.routes,
-    initialRoute: AppPages.INITIAL_ROUTE,
+    initialRoute: AppPages.initialRoute,
+    initialBinding: InitialBinding(),
     title: 'Loc Reminder',
     /*
         Dark Theme Colors
       */
     darkTheme: ThemeData(
-        drawerTheme: DrawerThemeData(
+        drawerTheme: const DrawerThemeData(
           elevation: 20,
           backgroundColor: Colors.black,
         ),
@@ -37,8 +40,8 @@ void main() async {
         scaffoldBackgroundColor: Colors.black,
         primaryColor: const Color.fromARGB(255, 253, 186, 71),
         accentColor: const Color(0xFFFFFFFF),
-        cardColor: Color.fromARGB(255, 26, 26, 26),
-        canvasColor: Color.fromARGB(255, 26, 26, 26),
+        cardColor: const Color.fromARGB(255, 26, 26, 26),
+        canvasColor: const Color.fromARGB(255, 26, 26, 26),
         shadowColor: const Color.fromARGB(216, 29, 29, 32),
         errorColor: const Color(0xFFB00020),
         secondaryHeaderColor: Colors.black,
@@ -48,25 +51,25 @@ void main() async {
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
                 color: Color.fromARGB(255, 255, 255, 255), width: 2.0),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Color.fromARGB(255, 253, 186, 71),
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Color.fromARGB(255, 253, 186, 71),
             ),
           ),
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             color: Color.fromARGB(255, 255, 255, 255),
           ),
-          labelStyle: TextStyle(
+          labelStyle: const TextStyle(
             color: Color.fromARGB(255, 253, 186, 71),
           ),
         )),
@@ -89,7 +92,7 @@ void main() async {
             iconTheme: IconThemeData(color: Color.fromARGB(255, 113, 74, 142))),
         scaffoldBackgroundColor: Colors.white,
         primaryColor: const Color.fromARGB(255, 113, 74, 142),
-        accentColor: Color.fromARGB(255, 0, 0, 0),
+        accentColor: const Color.fromARGB(255, 0, 0, 0),
         canvasColor: Colors.white,
         cardColor: Colors.white,
         shadowColor: const Color.fromARGB(255, 236, 236, 236),
