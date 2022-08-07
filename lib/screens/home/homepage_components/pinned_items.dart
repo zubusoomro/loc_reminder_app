@@ -1,8 +1,9 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:get/get.dart";
+import 'package:loc_reminder_app/screens/home/abstracthomepage.dart';
 
-class PinnedItems extends GetWidget {
+class PinnedItems extends AbstractHomePage {
   const PinnedItems({Key? key}) : super(key: key);
 
   @override

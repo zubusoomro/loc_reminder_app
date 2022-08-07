@@ -3,7 +3,7 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../routes/routes.dart';
+import '../../routes/routes.dart';
 
 class LoginController extends GetxController {
   RxBool showProgress = RxBool(false);

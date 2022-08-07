@@ -1,0 +1,1 @@
+import 'package:flutter/src/foundation/key.dart';import 'package:get/get.dart';import 'package:loc_reminder_app/screens/home/homepage_controller.dart';abstract class AbstractHomePage extends GetView<HomePageController> {  const AbstractHomePage({Key? key}) : super(key: key);}

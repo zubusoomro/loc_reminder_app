@@ -2,18 +2,14 @@ import "package:flutter/cupertino.dart";
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
+import 'package:loc_reminder_app/screens/home/abstracthomepage.dart';
 
 import 'homepage_components/drawer.dart';
 import 'homepage_components/homepage_body.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key: key);
+class Homepage extends AbstractHomePage {
+  Homepage({Key? key}) : super(key: key);
 
-  @override
-  State<Homepage> createState() => _HomepageState();
-}
-
-class _HomepageState extends State<Homepage> {
   final _advancedDrawerController = AdvancedDrawerController();
 
   @override

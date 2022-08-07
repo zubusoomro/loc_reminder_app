@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loc_reminder_app/screens/home/abstracthomepage.dart';
 
-class SearchBar extends StatelessWidget {
+class SearchBar extends AbstractHomePage {
   const SearchBar({Key? key}) : super(key: key);
 
   @override

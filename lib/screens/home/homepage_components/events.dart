@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import "package:get/get.dart";
+import 'package:loc_reminder_app/screens/home/abstracthomepage.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class HomePageEventsSection extends GetWidget {
+class HomePageEventsSection extends AbstractHomePage {
   const HomePageEventsSection({Key? key}) : super(key: key);
 
   @override
@@ -20,16 +21,8 @@ class HomePageEventsSection extends GetWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Events",
-                      style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Get.theme.colorScheme.secondary)),
-                  Text(DateTime.now().toString().substring(0, 10),
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey)),
+                  Text("Events", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Get.theme.colorScheme.secondary)),
+                  Text(DateTime.now().toString().substring(0, 10), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey)),
                 ],
               ),
               IconButton(
@@ -43,7 +36,7 @@ class HomePageEventsSection extends GetWidget {
           ),
         ),
         Container(
-            padding: EdgeInsets.only(top: 20, bottom: 20),
+            padding: const EdgeInsets.only(top: 20, bottom: 20),
             child: Column(
               children: [
                 TableCalendar(
@@ -59,17 +52,11 @@ class HomePageEventsSection extends GetWidget {
                         todayDecoration: BoxDecoration(
                             color: Get.theme.primaryColor,
                             borderRadius: BorderRadius.circular(50),
-                            boxShadow: [
-                          BoxShadow(
-                              color: Get.theme.shadowColor,
-                              blurRadius: 100,
-                              offset: const Offset(0, 0))
-                        ]))),
+                            boxShadow: [BoxShadow(color: Get.theme.shadowColor, blurRadius: 100, offset: const Offset(0, 0))]))),
                 const SizedBox(height: 30),
                 eventContainer("Doctor's Appointment", "10:00 AM", Colors.blue),
                 eventContainer("Doctor's Appointment", "10:00 AM", Colors.teal),
-                eventContainer(
-                    "Doctor's Appointment", "10:00 AM", Colors.yellow)
+                eventContainer("Doctor's Appointment", "10:00 AM", Colors.yellow)
               ],
             ))
       ],
@@ -81,8 +68,7 @@ class HomePageEventsSection extends GetWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
           padding: const EdgeInsets.all(15),
-          decoration: BoxDecoration(
-              color: color, borderRadius: BorderRadius.circular(50)),
+          decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(50)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

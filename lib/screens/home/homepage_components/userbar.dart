@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class UserBar extends GetWidget {
-  final String? userName;
-  final int noOfTasks;
+import '../abstracthomepage.dart';
 
-  const UserBar({Key? key, required this.userName, required this.noOfTasks}) : super(key: key);
+class UserBar extends AbstractHomePage {
+  const UserBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    String? userName = controller.getUserData()?.displayName;
+    int noOfTasks = 0;
     String tasksMsg = "You have $noOfTasks tasks today";
     if (noOfTasks == 0) {
       tasksMsg = "Hurray! no tasks today";

@@ -1,0 +1,1 @@
+import 'package:firebase_auth/firebase_auth.dart';import 'package:get/get.dart';class HomePageController extends GetxController {  late FirebaseAuth _auth;  @override  void onInit() {    super.onInit();    _auth = FirebaseAuth.instance;  }  User? getUserData() {    return _auth.currentUser;  }}
