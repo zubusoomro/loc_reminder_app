@@ -7,6 +7,8 @@ import 'package:loc_reminder_app/view/login_view.dart';
 import 'package:loc_reminder_app/view/notes_view.dart';
 import 'package:loc_reminder_app/view/signup_view.dart';
 
+import '../view/notes_create.dart';
+
 class AppPages {
   AppPages._();
   static const INITIAL_ROUTE = Routes.getStarted;
@@ -19,5 +21,6 @@ class AppPages {
     GetPage(name: Routes.signup, page: () => SignupView()),
     GetPage(name: Routes.main, page: () => Homepage()),
     GetPage(name: Routes.notes, page: () => NotesView()),
+    GetPage(name: Routes.createNotes, page: () => CreateNotesView()),
   ];
 }
