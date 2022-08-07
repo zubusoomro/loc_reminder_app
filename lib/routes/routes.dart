@@ -6,4 +6,5 @@ abstract class Routes {
   static const signup = '/signup';
   static const main = '/main';
   static const notes = '/notes';
+  static const createNotes = '$notes/create';
 }

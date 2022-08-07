@@ -45,11 +45,7 @@ class NotesView extends GetWidget {
                         icon: Icon(CupertinoIcons.add_circled_solid,
                             color: Get.theme.scaffoldBackgroundColor),
                         onPressed: () {
-                          /*
-                            TO DO
-                            Add route to add new note
-                            Get.toNamed("/newnote");
-                           */
+                          Get.toNamed("/notes/create");
                         },
                       ),
                     ],
