@@ -1,0 +1,1 @@
+class ReminderModel {  String? _reminderId;  String? _reminderName;  DateTime? dateTime;  String get reminderId => _reminderId.toString();  set reminderId(String value) {    _reminderId = value;  }  String get reminderName => _reminderName.toString();  set reminderName(String value) {    _reminderName = value;  }}

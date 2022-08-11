@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loc_reminder_app/routes/routes.dart';
 import 'package:loc_reminder_app/screens/home/abstracthomepage.dart';
 
 class CustomAdvancedDrawer extends AbstractHomePage {
@@ -36,7 +37,7 @@ class CustomAdvancedDrawer extends AbstractHomePage {
                   const ListTile(leading: Icon(CupertinoIcons.calendar), title: Text("Calendar")),
                   ListTile(
                       onTap: () {
-                        Get.toNamed('/notes');
+                        Get.toNamed(Routes.notes);
                       },
                       leading: const Icon(CupertinoIcons.create),
                       title: const Text("Notes")),

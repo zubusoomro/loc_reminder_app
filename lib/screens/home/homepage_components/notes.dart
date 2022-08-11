@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import "package:get/get.dart";
+import 'package:loc_reminder_app/routes/routes.dart';
 import 'package:loc_reminder_app/screens/home/abstracthomepage.dart';
 
 class Notes extends AbstractHomePage {
@@ -20,7 +21,7 @@ class Notes extends AbstractHomePage {
               IconButton(
                 icon: Icon(CupertinoIcons.add_circled_solid, color: Get.theme.primaryColor),
                 onPressed: () {
-                  Get.toNamed("/notes");
+                  Get.toNamed(Routes.notes);
                 },
               )
             ],
